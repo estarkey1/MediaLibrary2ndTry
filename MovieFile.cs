@@ -104,4 +104,8 @@ public class MovieFile
             logger.Error(ex.Message);
         }
     }
+    public List<Movie> SearchByTitle(string title)
+    {
+        return Movies.Where(movie => movie.title.ToLower().Contains(title.ToLower())).ToList();
+    }
 }

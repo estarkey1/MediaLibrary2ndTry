@@ -87,4 +87,14 @@ class Program
             Console.WriteLine($"Genres: {string.Join(", ", movie.genres)}\n");
         }
     }
+
+    static void FindMovie(MovieFile movieFile)
+    {
+        Console.WriteLine("Enter the title of the movie to search:");
+        string searchTitle = Console.ReadLine();
+        List<Movie> searchResults = movieFile.SearchByTitle(searchTitle);
+        
+        Console.WriteLine($"Search Results ({searchResults.Count}):");
+        DisplayAllMovies(searchResults);
+    }
 }
