@@ -20,6 +20,7 @@ class Program
         {
             Console.WriteLine("1) Add Movie");
             Console.WriteLine("2) Display All Movies");
+            Console.WriteLine("3) Find Movie");
             Console.WriteLine("Enter 'quit' to exit");
             string choice = Console.ReadLine();
 
@@ -30,6 +31,9 @@ class Program
                     break;
                 case "2":
                     DisplayAllMovies(movieFile.Movies);
+                    break;
+                case "3":
+                    FindMovie(movieFile);
                     break;
                 case "quit":
                     exit = true;
